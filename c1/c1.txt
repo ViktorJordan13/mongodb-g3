@@ -43,3 +43,6 @@ Instalacija na:
     - https://blog.webdevsimplified.com/2022-02/mongo-db/
 - tutorijal za polesna instalacija i povtoruvanje
     - https://www.youtube.com/watch?v=ExcRbA7fy_A&list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA
+
+Cluster za online db link: https://www.mongodb.com/cloud/atlas/register
+

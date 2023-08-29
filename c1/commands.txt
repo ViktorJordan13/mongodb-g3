@@ -6,3 +6,33 @@
 - exit
 - db 
 - db.users.find() - NE E ISTIOT FIND od JavaScript, tuka toa ni predstavuva getAll (ni gi vraka site podatoci)
+- db.users.insertOne()
+- db.users.insertMany()
+- db.users.countDocuments()
+- db.users.updateOne()
+- db.users.updateMany()
+***Update vi e PATCH (go ostava objektot kakov sto si e, samo mu gi prikacuva podatocite sto ke mu gi dadete)
+- db.users.replaceOne()
+- db.users.replaceMany()
+***Replace vi e PUT (go brise CEL prethodniot objekt i go zamenuva so podatocite sto ke mu gi dadete)
+- db.users.deleteOne()
+- db.users.deleteMany()
+
+$gt - greater then
+$gte - greater then or equal
+$lt - less then
+$lte - less then or equal
+$exists - exists
+$in - in
+$nin - not in
+$not - negacija
+$and - i
+$or - ili
+$expr - expression (slozen izraz)
+$set - set (postavi)
+$inc - increment
+$rename - smeni go imeto na parametarot, na poleto (ne vrednosta)
+$unset - napravi ja vrednosta da mu bide null
+$push - push na niza, dodava element na nizata
+$pull - pull na niza, trga elemtn od nizata
+
