@@ -1,0 +1,8 @@
+- show dbs 
+- use appdb
+- cls (clear screen)
+- show collections 
+- db.dropDatabase()
+- exit
+- db 
+- db.users.find() - NE E ISTIOT FIND od JavaScript, tuka toa ni predstavuva getAll (ni gi vraka site podatoci)
