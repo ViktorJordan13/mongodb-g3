@@ -1,0 +1,43 @@
+//Class 1
+
+#Relation DBs are tables
+
+- primarni (unikaten kluc za vnesot(item))i stranski kluc (sto go nasleduva, povikuva od druga tabela)
+tabela studenti - id sto e unikatno
+- eden student slusa poveke kursevi (moduli)
+
+tabela kurs - broj na slusateli, vremetraenje, proekti, domasni, opis...
+
+- eden kurs ima poveke slusateli - N
+- eden student slusa poveke kursevi - N
+
+#Relacii
+- 1:N - eden student slusa poveke kursevi
+- N:1 - poveke studenti slusaat eden kurs
+- 1:1 - eden student slusa eden kurs
+- N:N - poveke studenti slusaat poveke kursevi
+
+#Nerelaciona baza na podatoci
+
+- Dokumenti (documents) predstavuvaat eden red vo tabelata - {}
+- Kolekcii (collections) - grupa od eden ili poveke dokumenti { {}, {} }
+- Baza na podatoci ( database ) - grupa od edna ili poveke kolekcii { { {} }, { {}, {}, } }
+
+- Baza na podatoci -> niza od kolekcii -> niza od dokumenti
+- Nerelacionite bazi na podatoci gi skladiraat podatocite vo fajlovi
+
+database {
+    [collections]: {
+        [documents]
+    }
+}
+
+- Eden podatok sto go vmetnuvame vo baza vo forma na JSON vo nerelacionite databazi ni predstavuva dokument
+- MongoDB raboti so BSON - binary JSON
+
+Instalacija na:
+ - MongoDB  - https://www.mongodb.com/docs/manual/installation/ - mongo databaza + MongoDB Compass
+ - mongosh - https://www.mongodb.com/docs/mongodb-shell/install/ - shell so koja ke rabotime i so koja ke pristapuvame i koritime query-es direkno vo terminal (za vezba i objasnuvanje)
+ - materiali za samostojno ucenje:
+    - MongoDB-CheatSheet.pdf
+    - https://blog.webdevsimplified.com/2022-02/mongo-db/
