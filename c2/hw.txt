@@ -1,0 +1,9 @@
+Try to implement (write the schema and model code)
+for Account that will have the following fields:
+
+1. email
+2. password
+3. username
+4. createdAt
+5. updatedAt
+6. owner (neka bide tip na User)

@@ -1,0 +1,54 @@
+-Operators are denoted with the $ sign
+-$set - for update
+-$ne - not equal - ({ name: { $ne "MyName "}})
+-$eq - equal - ({ name: {$eq: "MyName" }})
+-db.students.find - is not the same as .find() in Javascript
+-$lt - less than - pomalo - <
+-$lte - less than or equal - pomalo ili ednakvo - <=
+-$gt - greater than - pogolemo - >
+-$gte - greater than or equal - pogolemo ili ednakvo - >=
+-db.students.find({ gpa: { $gt: 3, $lte: 4}}) - studentite na koi gpa im e vo rang od 3 do 4
+-$in - requires array of matches
+-db.students.find({ name: { $in: ["Jenny", "Ana"]}})
+-$nin - negates $in - excludes the matches in the array
+
+### Logical Operators
+- $and
+- db.students.find ({ $and: [{ fullTime: true},{ age: {$lte: 30} }]})
+- $or
+- db.students.find ({ $or: [{ fullTime: true}, { age: {$lte: 30} }, {age: {$gt: 23}}]})
+- $not
+- db.students.find ({ age: { $not: { $gte: 30}}})
+- $nor
+- db.students.find ({ $nor: [{fullTime: true}, { age: { $gte: 30} } ]})
+
+- db.students.find().sort ({ gpa: -1 or 1}).limit(3)
+- 1 or true for ascending sorting
+- -1 or false for descending sorting
+
+
+//Cloud.mongodb
+
+Cloud{
+    [Projects]{
+        [Clusters]{
+            [databases] {
+                [collections]: {
+                    [documents]
+                }
+            }
+        }
+    }
+}
+
+Povrzuvanje so cluster:
+
+    Vo terminal (cmd):
+        mongosh "mongodb+srv://@cluster0.glpgzlj.mongodb.net" --username test
+        Enter password - ****
+    
+    Vo MongoDB Compass:
+        mongodb+srv://test:123@cluster0.glpgzlj.mongodb.net
+
+npm init -y
+npm i mongoose

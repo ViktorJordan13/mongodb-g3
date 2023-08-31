@@ -1,0 +1,13 @@
+Od toa sto go napravivte vo domasnoto:
+
+1. Najdete gi site
+2. Najdete eden so odredeno ime
+3. Najdete gi site sto se postari od 20 godini
+4. Najdete gi site sto se pomladi od 18 godini
+5. Najdete 2 vnesa sto se so ist broj na godini
+6. Kreirajte 5 novi vnesa sto site imaat 5 godini
+
+Site ovie izvrsete gi so samo edna komanda!
+
+BONUS: konektirajte se na cloud clusterot sto go napravivte, dodadete gi podatocite tamu
+(racno ili so import json fajl), i komandite izvrsete gi tamu
