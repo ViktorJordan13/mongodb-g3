@@ -12,7 +12,7 @@ const User = require("./user");
 
 mongoose
   .connect(
-    "mongodb+srv://viktorj560:1234@mongodb-g3.evm2fxk.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://viktorj560:1234@mongodb-g3.evm2fxk.mongodb.net/users?retryWrites=true&w=majority"
   )
   .then(() => console.log("Connected!"));
 
@@ -22,10 +22,10 @@ mongoose
       // const user = new User({ name: "Viktor", age: 200 }); //podatocite bi stignale od req.body
       // await user.save();
   
-    //HINT if you want to test out Accounts
+    //GET baranje
     const foundUser = await User.findOne({
       name: "Viktor",
-      age: 200,
+      age: 100,
     });
   
     console.log("user found", foundUser);
