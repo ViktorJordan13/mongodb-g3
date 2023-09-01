@@ -1,0 +1,54 @@
+- Model
+    - gi koristime da kreirame shemi
+    - tie shemi gi vrzuvame za nekoja kolekcija
+    primer: mongoose.model("Account", accountSchema, "account") - semata <accountSchema>
+    so ime <Account> ja vrzuvame na kolekcijata <account>
+    - CRUD funkcionalnosti
+        1. GET - ne ni treba telo(body) i se povikuva Account.find({})
+        2. POST - imame telo i ni treba da kreirame nov objekt(dokument) - nov Account
+        za da go zacuvame novo kreiraniot account.save()
+        3. PUT - imame telo koe moze da bide parcijalno ili celosno, ni treba id za da znaeme koj 
+        account ke go updatirame, i telo kade ke se apliciraat novite vrednosti
+        4. DELETE - imame id za da najdeme koj account sakame da go izbriseme od baza
+
+-Controller
+    //req.body, req.query, req.params
+    - Ima funcii koi komuniciraat so modelot preku browser t.e. so pomos na REQUEST i RESPONSE
+    - GET - nema telo i samo si ja povikuva funkcijata od modelot asinhrono
+    - POST - imame telo koe go zemame od req.body i ja povikuvame funkcijata create od modelot
+    - PUT - imame telo i imame params (ni go sodrzi id-to) i spored toa gi isprakame na modelot ovie
+    parametri i koristime Account.updateOne({ _id: req.params.id}, req.body)
+    - DELETE - imame id vo params i spored toa go preprakame request-ot do modelot do funkcijata DELETE
+    i se koristi Account.deleteOne({ _id: req.params.id })
+
+Index.js
+
+    - Tuka gi povikuvame ovie endpoint-i t.e. ruti za da pravime manipulacija bidejki nema vo ovaa
+    aplikacija da imame VIEW - za toa go koristime POSTMAN
+
+- Komandite koi dosega gi pominavme i ke ni trebaat ovde:
+
+    -CREATE
+        1. insertOne - vmetnuvame eden podatok vo baza
+            db.users.insertOne ({ name: "Test", age" 20})
+        2. insertMany - niza od podatoci koi gi vmetnuvame
+            db.users.insertManu ([{ name: "Test", age" 20},  { name: "Test2", age" 30}])
+
+    -READ
+        1. findOne - najdi eden podatok(dokument)
+            - go vrakja prviot koj go naoga vo bazata sto go ispolnuva uslovot (filterot)
+        2. find - gi vrakja site (getAll)
+    
+    -UPDATE 
+        1. updateOne - azuriranje na eden podatok(dokument)
+            db.users.updateOne ({ name: "Test"}, {name: "Test Smenet"})
+        2. updateMany - azuriranje na poveke podatoci (dokumenti)
+            db.users.updateMany ({ name: "Test"}, {name: "Test Smenet"})
+
+    -DELETE
+        1. deleteOne - brisi eden podatok (dokument)
+            -db.users.deleteOne({_id: id})
+        2. deleteMany - brisi poveke podatoci (dokumenti)
+            -db.users.deleteMany({ email: "test@gmail.com"})
+
+    

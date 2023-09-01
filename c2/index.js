@@ -19,16 +19,16 @@ mongoose
   async function run() {
     //POST baranje
     //req.body.name i req.body.age
-      // const user = new User({ name: "Viktor", age: 200 }); //podatocite bi stignale od req.body
+      // const user = new User({ name: "Primer", age: 20 }); //podatocite bi stignale od req.body
       // await user.save();
   
     //GET baranje
-    const foundUser = await User.findOne({
-      name: "Viktor",
-      age: 100,
-    });
+    // const foundUser = await User.findOne({
+    //   name: "Viktor",
+    //   age: 100,
+    // });
   
-    console.log("user found", foundUser);
+    // console.log("user found", foundUser);
   }
   
   run();
